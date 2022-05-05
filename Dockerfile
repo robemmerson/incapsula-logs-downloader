@@ -12,8 +12,5 @@ RUN apt-get install -y swig openssl python3-pip build-essential python-dev libss
 COPY ./script/requirements.txt /
 RUN pip install -r /requirements.txt
 
-# Copy our settings
-COPY ./config/Settings.Config /etc/incapsula/logs/config/Settings.Config
-
 # Run our script
 CMD "/usr/local/bin/imperva-connector.py"

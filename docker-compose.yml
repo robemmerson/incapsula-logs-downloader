@@ -4,5 +4,6 @@ services:
     imperva:
         build:
             context: .
+        volumes:
+            - ./config/Settings.Config:/etc/incapsula/logs/config/Settings.Config
         restart: always
-
